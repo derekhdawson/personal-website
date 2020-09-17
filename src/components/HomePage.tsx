@@ -1,6 +1,5 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
 import CodeIcon from '@material-ui/icons/Code';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -14,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { WHO_AM_I, FOOTER_TITLE, CONTACT_MESSAGE } from '../constants';
 import metronomeImg from '../images/metronome.png';
+import catanImg from '../images/catan-board-generator.png';
 import { Link } from '@material-ui/core';
 
 export default function HomePage() {
@@ -45,7 +45,7 @@ export default function HomePage() {
                     <Grid container spacing={4}>
                         <Grid item xs={12} sm={6} md={4}>
                             <Card className={classes.card}>
-                                <CardMedia className={classes.cardMedia} image={metronomeImg} title="Image title" />
+                                <CardMedia className={classes.cardMedia} image={metronomeImg} title="Metronome" />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
                                         Metronome
@@ -62,6 +62,37 @@ export default function HomePage() {
                                     <Link
                                         className={classes.projectActions}
                                         href="https://github.com/derekhdawson/metronome"
+                                        target="_blank"
+                                        rel="noopener"
+                                    >
+                                        Source Code
+                                    </Link>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card className={classes.card}>
+                                <CardMedia
+                                    className={classes.cardMedia}
+                                    image={catanImg}
+                                    title="Catan Board Generator"
+                                />
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Catan Board Generator
+                                    </Typography>
+                                    <Typography>
+                                        A utility app for Catan players to generate random boards. Written in Swift 4.
+                                        Credits to my brother, Andrew, for coding the core algorithm.
+                                    </Typography>
+                                </CardContent>
+                                <CardActions className={classes.projectActionsContent}>
+                                    <Link className={classes.projectActions} href="catan-board-generator">
+                                        Open
+                                    </Link>
+                                    <Link
+                                        className={classes.projectActions}
+                                        href="https://github.com/derekhdawson/catan-board-generator.git"
                                         target="_blank"
                                         rel="noopener"
                                     >
